@@ -1,6 +1,9 @@
-import { Request, Response } from "express";
-
 import { Category } from "../model/Category";
+
+interface ICreateCategoryDTO {
+  name: string;
+  description: string;
+}
 
 export class CategoriesRepository {
   private categories: Category[];
@@ -9,9 +12,7 @@ export class CategoriesRepository {
     this.categories = [];
   }
 
-  create(request: Request, response: Response) {
-    const { name, description } = request.body;
-
+  create({ description, name }: ICreateCategoryDTO): void {
     const category = new Category();
     Object.assign(category, {
       name,
@@ -20,7 +21,9 @@ export class CategoriesRepository {
     });
 
     this.categories.push(category);
+  }
 
-    return response.json(category);
+  list(): Category[] {
+    return this.categories;
   }
 }
