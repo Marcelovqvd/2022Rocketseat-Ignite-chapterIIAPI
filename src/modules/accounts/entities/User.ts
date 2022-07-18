@@ -1,4 +1,3 @@
-import { Expose } from "class-transformer";
 import { Column, CreateDateColumn, Entity, PrimaryColumn } from "typeorm";
 import { v4 as uuidV4 } from "uuid";
 
@@ -11,6 +10,9 @@ class User {
   name: string;
 
   @Column()
+  username: string;
+
+  @Column()
   email: string;
 
   @Column()
@@ -21,9 +23,6 @@ class User {
 
   @Column()
   isAdmin: boolean;
-
-  @Column()
-  avatar: string;
 
   @CreateDateColumn()
   created_at: Date;
