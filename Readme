@@ -15,7 +15,6 @@ Principais tecnologias utilizadas:
 ## Cadastro de carros
 Requisitos funcionais:
 - Deve ser possível cadastrar um novo carro
-- Deve ser possível listar todas as categorias
 
 Regras de negócio:
 - Não deve ser possível cadastrar um carro com uma placa já existente
@@ -33,7 +32,7 @@ Requisitos funcionais:
 Regras de negócio:
 - O usuário não precisa estar logado no sistema
 
-## Cadastro de espeificiação de carros
+## Cadastro de especificiação de carros
 Requisitos funcionais:
 - Deve ser possível cadastrar uma especificação para um carro
 - Deve ser possível listar todas as especificações 
