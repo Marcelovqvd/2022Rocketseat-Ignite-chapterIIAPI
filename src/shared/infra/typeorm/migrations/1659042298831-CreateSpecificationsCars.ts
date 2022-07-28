@@ -18,7 +18,7 @@ export class CreateSpecificationsCars1659018686700
             type: "uuid",
           },
           {
-            name: "specification_id",
+            name: "specifications_id",
             type: "uuid",
           },
           {
@@ -35,7 +35,7 @@ export class CreateSpecificationsCars1659018686700
         name: "FKSpecificationCar",
         referencedTableName: "specifications",
         referencedColumnNames: ["id"],
-        columnNames: ["specification_id"],
+        columnNames: ["specifications_id"],
         onDelete: "SET NULL",
         onUpdate: "SET NULL",
       })
