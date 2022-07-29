@@ -18,7 +18,7 @@ export class CreateSpecificationsCars1659018686700
             type: "uuid",
           },
           {
-            name: "specifications_id",
+            name: "specification_id",
             type: "uuid",
           },
           {
