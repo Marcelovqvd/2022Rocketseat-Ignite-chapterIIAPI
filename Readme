@@ -45,7 +45,6 @@ Regras de negócio:
 ## Cadastro de imagens do carro
 Requisitos funcionais:
 - Deve ser possível cadastrar uma imagem para um carro
-- Deve ser possível listar todos os carros
 
 Requisitos não funcional:
 - Em desenvolvimento, utilizar o Multer para upload dos arquivos
