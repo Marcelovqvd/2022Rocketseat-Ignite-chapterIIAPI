@@ -5,7 +5,7 @@ import { IRentalsRepository } from "@modules/rentals/repositories/IRentalsReposi
 
 import { Rental } from "../entities/Rental";
 
-class RentalRepositories implements IRentalsRepository {
+class RentalsRepositories implements IRentalsRepository {
   private repository: Repository<Rental>;
   constructor() {
     this.repository = getRepository(Rental);
@@ -16,7 +16,7 @@ class RentalRepositories implements IRentalsRepository {
   }
 
   async findOpenRentalByUser(user_id: string): Promise<Rental> {
-    const openByUser = await this.repository.findOne({ car_id });
+    const openByUser = await this.repository.findOne({ user_id });
     return openByUser;
   }
 
@@ -36,3 +36,5 @@ class RentalRepositories implements IRentalsRepository {
     return rental;
   }
 }
+
+export { RentalsRepositories };
