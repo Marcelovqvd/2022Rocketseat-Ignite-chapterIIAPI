@@ -25,6 +25,16 @@ export class CreateSpecifications1658139001517 implements MigrationInterface {
             default: "now()",
           },
         ],
+        foreignKeys: [
+          {
+            name: "FKSpecificationCar",
+            referencedTableName: "categories",
+            referencedColumnNames: ["id"],
+            columnNames: ["id"],
+            onDelete: "SET NULL",
+            onUpdate: "SET NULL",
+          },
+        ],
       })
     );
   }
